@@ -2,6 +2,7 @@ const tailwindcss = require("tailwindcss");
 const purgecss = require("@fullhuman/postcss-purgecss");
 const cssnano = require("cssnano");
 const autoprefixer = require("autoprefixer");
+var atImport = require("postcss-import");
 
 module.exports = ctx => ({
   // plugins: {
@@ -10,6 +11,7 @@ module.exports = ctx => ({
   //   autoprefixer: ctx.env === 'production' ? {} : false,
   // }
   plugins: [
+    atImport,
     tailwindcss("./tailwind.js"),
     ctx.env === "production" ? cssnano({ preset: "default" }) : false,
     ctx.env === "production" ? purgecss({content: ["**/*.html"] }) : false,
