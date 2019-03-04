@@ -21,7 +21,7 @@
 @import "tailwindcss/components";
 /* @tailwind components; */
 
-@import "components/buttons";
+/* @import "components/buttons"; */
 
 /**
   * Here you would add any of your custom component classes; stuff that you'd

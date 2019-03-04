@@ -1,4 +1,3 @@
-
 /*
 
 Tailwind - The Utility-First CSS Framework
@@ -25,7 +24,7 @@ View the full documentation at https://tailwindcss.com.
 |
 */
 
-let defaultConfig = require('tailwindcss/defaultConfig')()
+//let defaultConfig = require('tailwindcss/defaultConfig')()
 
 
 /*
@@ -57,7 +56,7 @@ let colors = {
   'grey-lightest': '#f8fafc',
   'white': '#ffffff',
 
-  'guray22': '#0000ff',
+  'guray22': 'red',
 
   'red-darkest': '#3b0d0c',
   'red-darker': '#621b18',
@@ -254,15 +253,15 @@ module.exports = {
   */
 
   textSizes: {
-    'xs': '.75rem',     // 12px
-    'sm': '.875rem',    // 14px
-    'base': '1rem',     // 16px
-    'lg': '1.125rem',   // 18px
-    'xl': '1.25rem',    // 20px
-    '2xl': '1.5rem',    // 24px
-    '3xl': '1.875rem',  // 30px
-    '4xl': '2.25rem',   // 36px
-    '5xl': '3rem',      // 48px
+    'xs': '.75rem', // 12px
+    'sm': '.875rem', // 14px
+    'base': '1rem', // 16px
+    'lg': '1.125rem', // 18px
+    'xl': '1.25rem', // 20px
+    '2xl': '1.5rem', // 24px
+    '3xl': '1.875rem', // 30px
+    '4xl': '2.25rem', // 36px
+    '5xl': '3rem', // 48px
   },
 
 
@@ -423,7 +422,9 @@ module.exports = {
   |
   */
 
-  borderColors: global.Object.assign({ default: colors['grey-light'] }, colors),
+  borderColors: global.Object.assign({
+    default: colors['grey-light']
+  }, colors),
 
 
   /*
@@ -938,7 +939,40 @@ module.exports = {
       // center: true,
       // padding: '1rem',
     }),
-    // require('./src/css/buttons')(),
+    require('./src/css/plugins/buttons')(
+      //only generate these
+      {
+        borderRadius: '2rem', // Default: .25rem
+        fontWeight: '600', // Default: 600
+        lineHeight: '1.25', // Default: 1.25
+        fontSize: '1rem', // Default: 1rem
+        padding: '.5rem 1rem', // Default: .5rem 1rem
+
+        colors: {
+          // Class name: `.btn-primary`
+          primary: {
+            background: colors['blue'],
+            text: colors['white'],
+          },
+          // Class name: `.btn-secondary`
+          secondary: {
+            background: colors['grey'],
+            text: colors['black'],
+          },
+        }
+      }
+      // add to the default configuration
+      // function (options) {
+      //   options.colors = Object.assign(options.colors, {
+      //     guray: {
+      //       background: colors['guray22'],
+      //       text: colors['black'],
+      //     }
+      //   })
+
+      //   return options  
+      // }
+    ),
   ],
 
 

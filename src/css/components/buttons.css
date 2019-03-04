@@ -1,11 +1,31 @@
 .btn {
-    @apply font-sans py-2 px-4 rounded;
+    @apply font-sans text-sm py-2 px-4 border-2;
 }
 
-.btn-blue {
-    @apply bg-blue text-white;
+.btn:focus{
+    @apply outline-none;
 }
 
-.btn-blue:hover {
-    @apply bg-blue-dark;
+.btn-primary {
+    @apply border-black bg-white text-black;
+}
+
+.btn-primary:hover {
+    @apply bg-black text-white;
+} 
+
+.btn-primary:active {
+    @apply bg-grey-darkest;
+} 
+
+.btn-secondary {
+    @apply border-white bg-blue text-white;
+}
+
+.btn-secondary:hover {
+    @apply bg-blue-light;
+} 
+
+.btn-secondary:active {
+    @apply bg-white text-blue-darkest;
 } 

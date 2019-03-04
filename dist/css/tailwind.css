@@ -550,25 +550,75 @@ table {
   }
 }
 
-/* @tailwind components; */
-
 .btn {
-  font-family: Helvetica, sans-serif;
-  padding-top: .5rem;
-  padding-bottom: .5rem;
-  padding-left: 1rem;
-  padding-right: 1rem;
-  border-radius: .25rem;
+  display: inline-block;
+  padding: .5rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  line-height: 1.25;
+  border-radius: 2rem;
+  text-decoration: none;
 }
 
-.btn-blue {
+.btn-sm {
+  padding: .5rem .75rem;
+  font-size: .875rem;
+  font-weight: 600;
+  line-height: 1.25;
+  border-radius: 2rem;
+}
+
+.btn-lg {
+  padding: .75rem 1.5rem;
+  font-size: 1.25rem;
+  font-weight: 600;
+  line-height: 1.25;
+  border-radius: 2rem;
+}
+
+.btn-primary {
   background-color: #3490dc;
   color: #fff;
 }
 
-.btn-blue:hover {
-  background-color: #2779bd;
+.btn-primary:focus {
+  outline: 0;
+  box-shadow: 0 0 0 .2em rgba(52, 144, 220, .5);
 }
+
+.btn-primary:hover {
+  background-color: #2483d1;
+  color: #fff;
+}
+
+.btn-primary:active {
+  background-color: #2483d1;
+  color: #fff;
+}
+
+.btn-secondary {
+  background-color: #b8c2cc;
+  color: #22292f;
+}
+
+.btn-secondary:focus {
+  outline: 0;
+  box-shadow: 0 0 0 .2em rgba(184, 194, 204, .5);
+}
+
+.btn-secondary:hover {
+  background-color: #a1afbc;
+  color: #22292f;
+}
+
+.btn-secondary:active {
+  background-color: #a1afbc;
+  color: #22292f;
+}
+
+/* @tailwind components; */
+
+/* @import "components/buttons"; */
 
 /**
   * Here you would add any of your custom component classes; stuff that you'd
@@ -654,7 +704,7 @@ table {
 }
 
 .bg-guray22 {
-  background-color: #00f;
+  background-color: red;
 }
 
 .bg-red-darkest {
@@ -946,7 +996,7 @@ table {
 }
 
 .hover\:bg-guray22:hover {
-  background-color: #00f;
+  background-color: red;
 }
 
 .hover\:bg-red-darkest:hover {
@@ -1238,7 +1288,7 @@ table {
 }
 
 .focus\:bg-guray22:focus {
-  background-color: #00f;
+  background-color: red;
 }
 
 .focus\:bg-red-darkest:focus {
@@ -1602,7 +1652,7 @@ table {
 }
 
 .border-guray22 {
-  border-color: #00f;
+  border-color: red;
 }
 
 .border-red-darkest {
@@ -1894,7 +1944,7 @@ table {
 }
 
 .hover\:border-guray22:hover {
-  border-color: #00f;
+  border-color: red;
 }
 
 .hover\:border-red-darkest:hover {
@@ -2186,7 +2236,7 @@ table {
 }
 
 .focus\:border-guray22:focus {
-  border-color: #00f;
+  border-color: red;
 }
 
 .focus\:border-red-darkest:focus {
@@ -4941,7 +4991,7 @@ table {
 }
 
 .text-guray22 {
-  color: #00f;
+  color: red;
 }
 
 .text-red-darkest {
@@ -5233,7 +5283,7 @@ table {
 }
 
 .hover\:text-guray22:hover {
-  color: #00f;
+  color: red;
 }
 
 .hover\:text-red-darkest:hover {
@@ -5525,7 +5575,7 @@ table {
 }
 
 .focus\:text-guray22:focus {
-  color: #00f;
+  color: red;
 }
 
 .focus\:text-red-darkest:focus {
@@ -6268,7 +6318,7 @@ table {
   }
 
   .sm\:bg-guray22 {
-    background-color: #00f;
+    background-color: red;
   }
 
   .sm\:bg-red-darkest {
@@ -6560,7 +6610,7 @@ table {
   }
 
   .sm\:hover\:bg-guray22:hover {
-    background-color: #00f;
+    background-color: red;
   }
 
   .sm\:hover\:bg-red-darkest:hover {
@@ -6852,7 +6902,7 @@ table {
   }
 
   .sm\:focus\:bg-guray22:focus {
-    background-color: #00f;
+    background-color: red;
   }
 
   .sm\:focus\:bg-red-darkest:focus {
@@ -7208,7 +7258,7 @@ table {
   }
 
   .sm\:border-guray22 {
-    border-color: #00f;
+    border-color: red;
   }
 
   .sm\:border-red-darkest {
@@ -7500,7 +7550,7 @@ table {
   }
 
   .sm\:hover\:border-guray22:hover {
-    border-color: #00f;
+    border-color: red;
   }
 
   .sm\:hover\:border-red-darkest:hover {
@@ -7792,7 +7842,7 @@ table {
   }
 
   .sm\:focus\:border-guray22:focus {
-    border-color: #00f;
+    border-color: red;
   }
 
   .sm\:focus\:border-red-darkest:focus {
@@ -10531,7 +10581,7 @@ table {
   }
 
   .sm\:text-guray22 {
-    color: #00f;
+    color: red;
   }
 
   .sm\:text-red-darkest {
@@ -10823,7 +10873,7 @@ table {
   }
 
   .sm\:hover\:text-guray22:hover {
-    color: #00f;
+    color: red;
   }
 
   .sm\:hover\:text-red-darkest:hover {
@@ -11115,7 +11165,7 @@ table {
   }
 
   .sm\:focus\:text-guray22:focus {
-    color: #00f;
+    color: red;
   }
 
   .sm\:focus\:text-red-darkest:focus {
@@ -11842,7 +11892,7 @@ table {
   }
 
   .md\:bg-guray22 {
-    background-color: #00f;
+    background-color: red;
   }
 
   .md\:bg-red-darkest {
@@ -12134,7 +12184,7 @@ table {
   }
 
   .md\:hover\:bg-guray22:hover {
-    background-color: #00f;
+    background-color: red;
   }
 
   .md\:hover\:bg-red-darkest:hover {
@@ -12426,7 +12476,7 @@ table {
   }
 
   .md\:focus\:bg-guray22:focus {
-    background-color: #00f;
+    background-color: red;
   }
 
   .md\:focus\:bg-red-darkest:focus {
@@ -12782,7 +12832,7 @@ table {
   }
 
   .md\:border-guray22 {
-    border-color: #00f;
+    border-color: red;
   }
 
   .md\:border-red-darkest {
@@ -13074,7 +13124,7 @@ table {
   }
 
   .md\:hover\:border-guray22:hover {
-    border-color: #00f;
+    border-color: red;
   }
 
   .md\:hover\:border-red-darkest:hover {
@@ -13366,7 +13416,7 @@ table {
   }
 
   .md\:focus\:border-guray22:focus {
-    border-color: #00f;
+    border-color: red;
   }
 
   .md\:focus\:border-red-darkest:focus {
@@ -16105,7 +16155,7 @@ table {
   }
 
   .md\:text-guray22 {
-    color: #00f;
+    color: red;
   }
 
   .md\:text-red-darkest {
@@ -16397,7 +16447,7 @@ table {
   }
 
   .md\:hover\:text-guray22:hover {
-    color: #00f;
+    color: red;
   }
 
   .md\:hover\:text-red-darkest:hover {
@@ -16689,7 +16739,7 @@ table {
   }
 
   .md\:focus\:text-guray22:focus {
-    color: #00f;
+    color: red;
   }
 
   .md\:focus\:text-red-darkest:focus {
@@ -17416,7 +17466,7 @@ table {
   }
 
   .lg\:bg-guray22 {
-    background-color: #00f;
+    background-color: red;
   }
 
   .lg\:bg-red-darkest {
@@ -17708,7 +17758,7 @@ table {
   }
 
   .lg\:hover\:bg-guray22:hover {
-    background-color: #00f;
+    background-color: red;
   }
 
   .lg\:hover\:bg-red-darkest:hover {
@@ -18000,7 +18050,7 @@ table {
   }
 
   .lg\:focus\:bg-guray22:focus {
-    background-color: #00f;
+    background-color: red;
   }
 
   .lg\:focus\:bg-red-darkest:focus {
@@ -18356,7 +18406,7 @@ table {
   }
 
   .lg\:border-guray22 {
-    border-color: #00f;
+    border-color: red;
   }
 
   .lg\:border-red-darkest {
@@ -18648,7 +18698,7 @@ table {
   }
 
   .lg\:hover\:border-guray22:hover {
-    border-color: #00f;
+    border-color: red;
   }
 
   .lg\:hover\:border-red-darkest:hover {
@@ -18940,7 +18990,7 @@ table {
   }
 
   .lg\:focus\:border-guray22:focus {
-    border-color: #00f;
+    border-color: red;
   }
 
   .lg\:focus\:border-red-darkest:focus {
@@ -21679,7 +21729,7 @@ table {
   }
 
   .lg\:text-guray22 {
-    color: #00f;
+    color: red;
   }
 
   .lg\:text-red-darkest {
@@ -21971,7 +22021,7 @@ table {
   }
 
   .lg\:hover\:text-guray22:hover {
-    color: #00f;
+    color: red;
   }
 
   .lg\:hover\:text-red-darkest:hover {
@@ -22263,7 +22313,7 @@ table {
   }
 
   .lg\:focus\:text-guray22:focus {
-    color: #00f;
+    color: red;
   }
 
   .lg\:focus\:text-red-darkest:focus {
@@ -22990,7 +23040,7 @@ table {
   }
 
   .xl\:bg-guray22 {
-    background-color: #00f;
+    background-color: red;
   }
 
   .xl\:bg-red-darkest {
@@ -23282,7 +23332,7 @@ table {
   }
 
   .xl\:hover\:bg-guray22:hover {
-    background-color: #00f;
+    background-color: red;
   }
 
   .xl\:hover\:bg-red-darkest:hover {
@@ -23574,7 +23624,7 @@ table {
   }
 
   .xl\:focus\:bg-guray22:focus {
-    background-color: #00f;
+    background-color: red;
   }
 
   .xl\:focus\:bg-red-darkest:focus {
@@ -23930,7 +23980,7 @@ table {
   }
 
   .xl\:border-guray22 {
-    border-color: #00f;
+    border-color: red;
   }
 
   .xl\:border-red-darkest {
@@ -24222,7 +24272,7 @@ table {
   }
 
   .xl\:hover\:border-guray22:hover {
-    border-color: #00f;
+    border-color: red;
   }
 
   .xl\:hover\:border-red-darkest:hover {
@@ -24514,7 +24564,7 @@ table {
   }
 
   .xl\:focus\:border-guray22:focus {
-    border-color: #00f;
+    border-color: red;
   }
 
   .xl\:focus\:border-red-darkest:focus {
@@ -27253,7 +27303,7 @@ table {
   }
 
   .xl\:text-guray22 {
-    color: #00f;
+    color: red;
   }
 
   .xl\:text-red-darkest {
@@ -27545,7 +27595,7 @@ table {
   }
 
   .xl\:hover\:text-guray22:hover {
-    color: #00f;
+    color: red;
   }
 
   .xl\:hover\:text-red-darkest:hover {
@@ -27837,7 +27887,7 @@ table {
   }
 
   .xl\:focus\:text-guray22:focus {
-    color: #00f;
+    color: red;
   }
 
   .xl\:focus\:text-red-darkest:focus {
